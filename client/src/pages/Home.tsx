@@ -42,7 +42,7 @@ export default function Home() {
             <blockquote className="pull-quote">“I learn best by doing — and by making the <em>small ideas</em> visible.”</blockquote>
             <div className="intro-copy">
               <p>I am in the middle of learning AI and machine learning, working through Python, data structures, and the math fundamentals that everything else builds on.</p>
-              <p>I try to back up what I study with small projects, so the learning stays practical and honest. This portfolio is a place to keep that momentum in view.</p>
+              <p>I try to back up what I study with small projects, so the learning stays practical and honest. This project site is a place to keep that momentum in view.</p>
               <Link href="/about" className="text-link">Read the longer version <ArrowUpRight size={15} /></Link>
             </div>
           </div>

@@ -22,7 +22,7 @@ import NotFound from "./pages/NotFound";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/project", label: "Project" },
   { href: "/experience", label: "Experience" },
   { href: "/contact", label: "Contact" },
 ];
@@ -105,6 +105,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/project" component={Portfolio} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/experience" component={Experience} />
       <Route path="/contact" component={Contact} />

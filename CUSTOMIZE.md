@@ -26,9 +26,9 @@ Change a hex value, save, and the preview server will refresh automatically. Kee
 
 Search for the sentence or heading you want to replace, edit the text between the JSX tags, and save. Use plain apostrophes or standard curly apostrophes; no other formatting is required.
 
-## Change projects and skills
+## Change the project and skills
 
-The featured project and project cards live in `client/src/pages/Portfolio.tsx`. The learning timeline and skill tags live in `client/src/pages/Experience.tsx`. Replace the placeholder copy and add or remove `<span className="tag">...</span>` items as your work evolves.
+The single Project 1 card lives in `client/src/pages/Portfolio.tsx`. Replace its placeholder copy, status, and tags as the project develops. The learning timeline and skill tags live in `client/src/pages/Experience.tsx`. Add or remove `<span className="tag">...</span>` items as your skills evolve.
 
 ## Change links and email
 
