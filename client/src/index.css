@@ -56,18 +56,28 @@ body {
   color: var(--foreground);
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 320ms ease, color 320ms ease;
 }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible { outline: 3px solid rgba(102, 155, 188, 0.8); outline-offset: 4px; }
 
-.site-frame { min-height: 100vh; overflow: hidden; background: var(--papaya); }
+.site-frame { min-height: 100vh; overflow: hidden; background: var(--papaya); transition: background-color 320ms ease, color 320ms ease; }
+.section, .section--deep, .section--cream, .ticker-strip, .site-footer, .focus-card, .skills-panel, .portfolio-feature, .project-card, .contact-card {
+  transition: background-color 320ms ease, color 320ms ease, border-color 320ms ease;
+}
 .site-header {
   position: relative;
   z-index: 20;
   background: rgba(253, 240, 213, 0.88);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(18px);
+  transition: background-color 320ms ease, border-color 320ms ease, color 320ms ease;
+}
+.page-hero h1, .section-heading h2, .pull-quote, .about-copy h2, .timeline-item h3, .project-card h3, .contact-heading,
+.hero-lede, .hero-meta, .page-hero__lede, .section-heading p, .intro-copy, .about-copy > p, .principle h3, .principle p,
+.timeline-item p, .project-card p, .contact-copy, .site-nav__link, .header-social, .theme-toggle, .header-cta, .button-ghost {
+  transition: color 320ms ease, background-color 320ms ease, border-color 320ms ease;
 }
 .site-header__inner {
   width: min(1180px, calc(100% - 48px));
