@@ -12,7 +12,7 @@ export default function Home() {
             <h1 className="hero-title">Samunnat<span>Tuladhar.</span></h1>
             <p className="hero-lede">Aspiring AI/ML Engineer building foundations in Python, data, and intelligent systems — one deliberate experiment at a time.</p>
             <div className="hero-actions">
-              <Link href="/portfolio" className="button-primary">Explore the work <ArrowUpRight size={16} /></Link>
+              <Link href="/project" className="button-primary">Explore the work <ArrowUpRight size={16} /></Link>
               <Link href="/about" className="button-ghost">More about me</Link>
             </div>
             <div className="hero-meta"><span className="hero-meta__line" /> <span>Learning in public / Kathmandu · Nepal</span></div>
