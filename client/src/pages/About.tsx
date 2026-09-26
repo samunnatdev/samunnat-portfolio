@@ -1,6 +1,5 @@
 import { ArrowUpRight, Github, Linkedin } from "lucide-react";
-
-const profileImage = "/manus-storage/profile_a96b88f7.jpg";
+import { profileImage } from "@/lib/profile-image";
 
 export default function About() {
   return (

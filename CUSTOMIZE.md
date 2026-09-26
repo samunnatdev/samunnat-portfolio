@@ -44,7 +44,7 @@ cp /path/to/your-new-photo.jpg /home/ubuntu/webdev-static-assets/profile.jpg
 manus-upload-file --webdev /home/ubuntu/webdev-static-assets/profile.jpg
 ```
 
-Copy the returned `/manus-storage/...` path into the `profileImage` constant in `Home.tsx` and `About.tsx`. Do not place large media files in `client/public` or `client/src/assets`.
+For this site, the current image is embedded in `client/src/lib/profile-image.ts` so it also works when the repository is cloned outside WebDev. To replace it, regenerate that module from the new photo with the same `data:image/jpeg;base64,...` format, then keep the imports in `Home.tsx` and `About.tsx` unchanged. Do not place large media files in `client/public` or `client/src/assets`.
 
 ## Run and review locally
 
