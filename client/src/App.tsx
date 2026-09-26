@@ -6,11 +6,13 @@ import {
   Linkedin,
   Mail,
   Menu,
+  Moon,
+  Sun,
   X,
 } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { ThemeProvider } from "./contexts/ThemeContext";
+import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -40,6 +42,8 @@ function ScrollToTop() {
 function SiteLayout({ children }: { children: ReactNode }) {
   const [location] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
 
   return (
     <div className="site-frame">
@@ -67,6 +71,16 @@ function SiteLayout({ children }: { children: ReactNode }) {
             <a className="header-social" href="https://github.com/samunnatdev" target="_blank" rel="noreferrer" aria-label="Samunnat on GitHub">
               <Github size={17} strokeWidth={1.8} />
             </a>
+            <button
+              className="theme-toggle"
+              type="button"
+              onClick={() => toggleTheme?.()}
+              aria-pressed={isDark}
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+              title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {isDark ? <Sun size={17} strokeWidth={1.8} /> : <Moon size={17} strokeWidth={1.8} />}
+            </button>
             <Link href="/contact" className="header-cta">
               Let’s connect <ArrowUpRight size={15} strokeWidth={2} />
             </Link>
@@ -118,7 +132,7 @@ function Router() {
 export default function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider defaultTheme="light">
+      <ThemeProvider defaultTheme="light" switchable>
         <TooltipProvider>
           <Toaster />
           <ScrollToTop />

@@ -37,6 +37,17 @@
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+html.dark {
+  color-scheme: dark;
+  --background: #001c2b;
+  --foreground: #fdf0d5;
+  --card: #052b3c;
+  --card-foreground: #fdf0d5;
+  --border: rgba(253, 240, 213, 0.18);
+  --cream: #052b3c;
+  --papaya: #fdf0d5;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -79,9 +90,23 @@ button:focus-visible, a:focus-visible { outline: 3px solid rgba(102, 155, 188, 0
 .site-header__actions { display: flex; align-items: center; gap: 16px; }
 .header-social { display: inline-flex; color: var(--deep); transition: color 180ms ease, transform 180ms var(--ease-out); }
 .header-social:hover { color: var(--red); transform: translateY(-2px); }
+.theme-toggle { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(0, 48, 73, 0.2); border-radius: 50%; background: transparent; color: var(--deep); transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms var(--ease-out); }
+.theme-toggle:hover { border-color: var(--red); background: rgba(193, 18, 31, 0.1); color: var(--red); transform: translateY(-2px) rotate(-8deg); }
 .header-cta { display: inline-flex; align-items: center; gap: 7px; background: var(--deep); color: var(--papaya); padding: 11px 15px; border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: 0.02em; transition: background 180ms ease, transform 180ms var(--ease-out); }
 .header-cta:hover { background: var(--red); transform: translateY(-2px); }
 .menu-toggle { display: none; border: 0; background: none; color: var(--deep); padding: 4px; }
+
+html.dark .site-frame { background: var(--background); }
+html.dark .site-header { background: rgba(0, 28, 43, 0.9); }
+html.dark .brand-mark, html.dark .site-nav__link, html.dark .header-social, html.dark .theme-toggle, html.dark .menu-toggle { color: var(--foreground); }
+html.dark .site-nav__link:hover, html.dark .site-nav__link--active, html.dark .header-social:hover, html.dark .theme-toggle:hover { color: var(--red); }
+html.dark .page-hero__lede, html.dark .hero-lede, html.dark .section-heading p, html.dark .intro-copy, html.dark .about-copy > p, html.dark .principle p, html.dark .timeline-item p, html.dark .project-card p, html.dark .contact-copy { color: rgba(253, 240, 213, 0.68); }
+html.dark .hero-meta { color: rgba(253, 240, 213, 0.58); }
+html.dark .button-ghost { border-color: rgba(253, 240, 213, 0.3); color: var(--foreground); }
+html.dark .button-ghost:hover { border-color: var(--foreground); background: rgba(253, 240, 213, 0.08); }
+html.dark .pull-quote, html.dark .about-copy h2, html.dark .timeline-item h3, html.dark .project-card h3, html.dark .principle h3 { color: var(--foreground); }
+html.dark .section--cream { background: var(--cream); }
+html.dark .about-photo { border-color: var(--foreground); }
 
 .page-wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 .page-hero { padding: 112px 0 84px; position: relative; }
