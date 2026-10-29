@@ -6,8 +6,6 @@ import {
   Linkedin,
   Mail,
   Menu,
-  Moon,
-  Sun,
   X,
 } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
@@ -79,7 +77,10 @@ function SiteLayout({ children }: { children: ReactNode }) {
               aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
               title={isDark ? "Switch to light mode" : "Switch to dark mode"}
             >
-              {isDark ? <Sun size={17} strokeWidth={1.8} /> : <Moon size={17} strokeWidth={1.8} />}
+              <span className={`theme-glyph ${isDark ? "theme-glyph--dark" : ""}`} aria-hidden="true">
+                <span className="theme-glyph__sun" />
+                <span className="theme-glyph__moon" />
+              </span>
             </button>
             <Link href="/contact" className="header-cta">
               Let’s connect <ArrowUpRight size={15} strokeWidth={2} />

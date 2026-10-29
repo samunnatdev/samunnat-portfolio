@@ -102,6 +102,13 @@ button:focus-visible, a:focus-visible { outline: 3px solid rgba(102, 155, 188, 0
 .header-social:hover { color: var(--red); transform: translateY(-2px); }
 .theme-toggle { width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(0, 48, 73, 0.2); border-radius: 50%; background: transparent; color: var(--deep); transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms var(--ease-out); }
 .theme-toggle:hover { border-color: var(--red); background: rgba(193, 18, 31, 0.1); color: var(--red); transform: translateY(-2px) rotate(-8deg); }
+.theme-glyph { position: relative; width: 18px; height: 18px; display: block; }
+.theme-glyph__sun, .theme-glyph__moon { position: absolute; inset: 0; margin: auto; display: block; transition: opacity 360ms ease, transform 420ms var(--ease-out), background-color 320ms ease, box-shadow 320ms ease; }
+.theme-glyph__sun { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 -7px 0 -3px currentColor, 0 7px 0 -3px currentColor, 7px 0 0 -3px currentColor, -7px 0 0 -3px currentColor, 5px 5px 0 -3px currentColor, -5px -5px 0 -3px currentColor, 5px -5px 0 -3px currentColor, -5px 5px 0 -3px currentColor; transform: rotate(0deg) scale(1); opacity: 1; }
+.theme-glyph__moon { width: 14px; height: 14px; border-radius: 50%; background: currentColor; transform: translate(4px, -3px) rotate(-35deg) scale(0.55); opacity: 0; }
+.theme-glyph__moon::after { content: ''; position: absolute; width: 14px; height: 14px; top: -4px; left: 4px; border-radius: 50%; background: var(--papaya); transition: background-color 320ms ease; }
+.theme-glyph--dark .theme-glyph__sun { transform: rotate(90deg) scale(0.55); opacity: 0; }
+.theme-glyph--dark .theme-glyph__moon { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
 .header-cta { display: inline-flex; align-items: center; gap: 7px; background: var(--deep); color: var(--papaya); padding: 11px 15px; border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: 0.02em; transition: background 180ms ease, transform 180ms var(--ease-out); }
 .header-cta:hover { background: var(--red); transform: translateY(-2px); }
 .menu-toggle { display: none; border: 0; background: none; color: var(--deep); padding: 4px; }
@@ -117,6 +124,11 @@ html.dark .button-ghost:hover { border-color: var(--foreground); background: rgb
 html.dark .pull-quote, html.dark .about-copy h2, html.dark .timeline-item h3, html.dark .project-card h3, html.dark .principle h3 { color: var(--foreground); }
 html.dark .section--cream { background: var(--cream); }
 html.dark .about-photo { border-color: var(--foreground); }
+html.dark .theme-glyph__moon::after { background: var(--background); }
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-glyph__sun, .theme-glyph__moon, .theme-glyph__moon::after { transition-duration: 0.01ms; }
+}
 
 .page-wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 .page-hero { padding: 112px 0 84px; position: relative; }
