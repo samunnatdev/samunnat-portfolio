@@ -18,6 +18,7 @@ import Portfolio from "./pages/Portfolio";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import SpotifyCallback from "./pages/SpotifyCallback";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -124,6 +125,7 @@ function Router() {
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/experience" component={Experience} />
       <Route path="/contact" component={Contact} />
+      <Route path="/spotify-callback" component={SpotifyCallback} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
