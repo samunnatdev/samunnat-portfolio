@@ -1,7 +1,6 @@
 import { ArrowUpRight, BrainCircuit, Code2, Database } from "lucide-react";
 import { Link } from "wouter";
 import { profileImage } from "@/lib/profile-image";
-import SpotifyNowPlaying from "@/components/SpotifyNowPlaying";
 
 export default function Home() {
   return (
@@ -31,12 +30,6 @@ export default function Home() {
       <div className="ticker-strip">
         <div className="ticker-strip__inner"><span>Python</span><strong>●</strong><span>Data structures</span><strong>●</strong><span>Math fundamentals</span><strong>●</strong><span>Machine learning</span></div>
       </div>
-
-      <section className="section section--spotify">
-        <div className="page-wrap">
-          <SpotifyNowPlaying />
-        </div>
-      </section>
 
       <section className="section section--cream">
         <div className="page-wrap">
