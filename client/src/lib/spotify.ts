@@ -1,4 +1,5 @@
-export const spotifyClientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID as string | undefined;
+// Spotify Client IDs are public OAuth identifiers; no Client Secret is used in this browser-only PKCE flow.
+export const spotifyClientId = (import.meta.env.VITE_SPOTIFY_CLIENT_ID as string | undefined) ?? "3fdd1facdfa04831a88413da31b44988";
 
 export const spotifyRedirectUri = `${window.location.origin}/spotify-callback`;
 
