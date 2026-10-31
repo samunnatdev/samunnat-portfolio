@@ -20,7 +20,7 @@ export default function Home() {
           <div className="hero-image-wrap">
             <div className="hero-index">01 / INTRODUCTION</div>
             <div className="hero-image-card">
-              <img className="hero-image" src={profileImage} alt="Portrait of Samunnat Tuladhar" />
+              <img className="hero-image" src={profileImage} alt="Samunnat Tuladhar" />
               <div className="hero-image-caption"><span>Profile / 2026</span><span>Curiosity over certainty.</span></div>
             </div>
           </div>
