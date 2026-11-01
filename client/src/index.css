@@ -156,9 +156,23 @@ html.dark .pull-quote, html.dark .about-copy h2, html.dark .timeline-item h3, ht
 html.dark .section--cream { background: var(--cream); }
 html.dark .about-photo { border-color: var(--foreground); }
 html.dark .theme-glyph__moon::after { background: var(--background); }
+html.dark .skills-panel > p { color: rgba(255, 241, 230, 0.88); }
+html.dark .skills-cloud .tag { border-color: rgba(255, 241, 230, 0.46); color: var(--papaya); }
+html.dark .experience-note { border-top-color: rgba(255, 241, 230, 0.34); color: rgba(255, 241, 230, 0.86); }
+html.dark .contact-card__label { color: var(--steel); }
+html.dark .contact-card__links { border-top-color: rgba(255, 241, 230, 0.34); }
+html.dark .contact-card__links a { color: rgba(255, 241, 230, 0.9); }
+html.dark .contact-card__links a:hover { color: var(--red); }
+
+.page-transition { animation: page-enter 420ms var(--ease-out) both; }
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .theme-glyph__sun, .theme-glyph__moon, .theme-glyph__moon::after { transition-duration: 0.01ms; }
+  .page-transition { animation: none; }
 }
 
 .page-wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }

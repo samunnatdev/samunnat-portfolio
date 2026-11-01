@@ -92,7 +92,7 @@ function SiteLayout({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      <main>{children}</main>
+      <main key={location} className="page-transition">{children}</main>
 
       <footer className="site-footer">
         <div className="site-footer__top">
